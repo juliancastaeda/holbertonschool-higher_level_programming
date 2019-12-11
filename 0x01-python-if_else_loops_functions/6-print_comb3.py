@@ -4,4 +4,4 @@ for i in range(0, 10):
         if i != 8:
             print("{}{}, ".format(i, j), end="")
         if i == 8:
-            print('89\n')
+            print('89')
