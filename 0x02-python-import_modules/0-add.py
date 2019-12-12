@@ -2,5 +2,5 @@
 import add_0
 a = 1
 b = 2
-add = a + b
-print('{:d} + {:d} = {:d}'.format(a, b, add))
+c = a + b
+print('{:d} + {:d} = {:d}'.format(a, b, c))
