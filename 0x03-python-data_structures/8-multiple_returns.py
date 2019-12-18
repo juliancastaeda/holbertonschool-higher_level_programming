@@ -7,4 +7,4 @@ def multiple_returns(sentence):
             return tuple_a
         if (i >= 0):
             tuple_b = (length, sentence[0])
-            return tuple_b
+            return (length, sentence[0])
