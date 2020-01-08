@@ -3,10 +3,11 @@ def safe_print_division(a, b):
     c = 'Inside result:'
     try:
         if b != 0:
-            return a/b
-        else:
-            return None
-    except TypeError:
-        print()
+            return a / b
+    except ZeroDivisionError:
+        return None
     finally:
-        print("{}".format(c)) 
+        if b != 0:
+            print("{}".format(c), a/b)
+        if b == 0:
+            print("{}".format(c), None)
