@@ -55,7 +55,9 @@ class Rectangle():
         if self.__width == 0 and self.__height == 0:
             print()
         else:
-            return (((((str(self.print_symbol * self.__width)) + '\n') * (self.__height)))[:-1])
+            my_list = ((str(self.print_symbol * self.__width)) + '\n')
+            my_list_1 = ((my_list * (self.__height))[:-1])
+            return my_list_1
 
     def __repr__(self):
         return("Rectangle ({:d}, {:d})".format(self.__width, self.__height))
