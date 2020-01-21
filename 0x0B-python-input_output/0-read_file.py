@@ -2,3 +2,4 @@
 def read_file(filename=""):
     filename = open('my_file_0.txt', 'r')
     print(filename.read(), end='')
+    filename.close
