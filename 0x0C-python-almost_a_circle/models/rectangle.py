@@ -12,15 +12,14 @@ comment
 
 class Rectangle(Base):
     """Class Rectangle"""
-    __nb_objects = 0
-
+    
     def __init__(self, width, height, x=0, y=0, id=None):
         """function coments"""
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
