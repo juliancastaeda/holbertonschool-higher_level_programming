@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+comment
+"""
 
 
 from models.base import Base
@@ -79,12 +82,13 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         i = 0
-        j = 0
         list = ['id', 'width', 'height', 'x', 'y']
-        if len(args) > 0 and args is not None:
+        if len(args) > 0:
             for value in args:
                 setattr(self, list[i], value)
                 i += 1
         else:
-            for key in kwargs.items():
-                j += 1
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+                i += 1
+                            
