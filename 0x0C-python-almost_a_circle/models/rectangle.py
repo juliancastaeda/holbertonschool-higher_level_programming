@@ -99,7 +99,7 @@ class Rectangle(Base):
         """
         i = 0
         list = ['id', 'width', 'height', 'x', 'y']
-        if len(args) > 0 is not None:
+        if len(args) > 0 and args is not None:
             for value in args:
                 setattr(self, list[i], value)
                 i += 1
