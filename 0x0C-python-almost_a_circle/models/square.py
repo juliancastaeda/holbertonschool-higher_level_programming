@@ -21,6 +21,6 @@ class Square(Rectangle):
         """
         comment
         """
-        a = '__class__.__name__'
-        b = 'self.width'
+        a = 'Square'
+        b = self.width
         return "[{}] ({}) {}/{} - {}".format(a, self.id, self.x, self.y, b)
