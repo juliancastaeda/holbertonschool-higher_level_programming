@@ -94,7 +94,8 @@ class Rectangle(Base):
         """
         w = self.__width
         e = self.__height
-        print(self.__y * '\n' + (' ' * self.__x + '#' * w + '\n') * (e), end='')
+        d = self.__y
+        print(d * '\n' + (' ' * self.__x + '#' * w + '\n') * (e), end='')
 
     def __str__(self):
         """
