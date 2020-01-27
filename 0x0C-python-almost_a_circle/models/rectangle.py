@@ -5,9 +5,8 @@ comment
 
 
 from models.base import Base
-"""
-cooment
-"""
+
+
 class Rectangle(Base):
     """Class Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -19,10 +18,12 @@ class Rectangle(Base):
         self.y = y
 
     @property
+    """ property"""
     def width(self):
         return self.__width
 
     @width.setter
+    """setter"""
     def width(self, value):
         if type(value) != int:
             raise TypeError('width must be an integer')
@@ -31,10 +32,12 @@ class Rectangle(Base):
         self.__width = value
 
     @property
+    """property"""
     def height(self):
         return self.__height
 
     @height.setter
+    """setter"""
     def height(self, value):
         if type(value) != int:
             raise TypeError('height must be an integer')
@@ -43,10 +46,12 @@ class Rectangle(Base):
         self.__height = value
 
     @property
+    """property"""
     def x(self):
         return self.__x
 
     @x.setter
+    """setter"""
     def x(self, value):
         if type(value) != int:
             raise TypeError('x must be an integer')
@@ -55,10 +60,12 @@ class Rectangle(Base):
         self.__x = value
 
     @property
+    """property"""
     def y(self):
         return self.__y
 
     @x.setter
+    """setter"""
     def y(self, value):
         if type(value) != int:
             raise TypeError('y must be an integer')
