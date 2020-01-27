@@ -5,9 +5,6 @@ comment
 
 
 from models.base import Base
-"""
-comment
-"""
 
 
 class Rectangle(Base):
@@ -77,7 +74,7 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, value):
         if type(value) is not int:
             raise TypeError('y must be an integer')
