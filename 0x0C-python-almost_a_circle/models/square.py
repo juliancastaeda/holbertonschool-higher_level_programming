@@ -23,4 +23,4 @@ class Square(Rectangle):
         """
         a = 'Square'
         b = self.width
-        return "[{}] ({}) {}/{} - {}".format(a, self.id, self.x, self.y, b)
+        return ("[{}] ({}) {}/{} - {}".format(a, self.id, self.x, self.y, b))
