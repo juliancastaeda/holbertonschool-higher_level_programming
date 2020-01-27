@@ -5,6 +5,9 @@ comment
 
 
 from models.base import Base
+"""
+comment
+"""
 
 
 class Rectangle(Base):
@@ -18,12 +21,10 @@ class Rectangle(Base):
         self.y = y
 
     @property
-    """ property"""
     def width(self):
         return self.__width
 
     @width.setter
-    """setter"""
     def width(self, value):
         if type(value) != int:
             raise TypeError('width must be an integer')
@@ -32,12 +33,10 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    """property"""
     def height(self):
         return self.__height
 
     @height.setter
-    """setter"""
     def height(self, value):
         if type(value) != int:
             raise TypeError('height must be an integer')
@@ -46,12 +45,10 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    """property"""
     def x(self):
         return self.__x
 
     @x.setter
-    """setter"""
     def x(self, value):
         if type(value) != int:
             raise TypeError('x must be an integer')
@@ -60,12 +57,10 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    """property"""
     def y(self):
         return self.__y
 
     @x.setter
-    """setter"""
     def y(self, value):
         if type(value) != int:
             raise TypeError('y must be an integer')
@@ -74,14 +69,23 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """
+        cooment
+        """
         return(self.__width * self.__height)
 
     def display(self):
+        """
+        cooment
+        """
         w = self.__width
         e = self.__height
         print(self.__y * '\n' + (' ' * self.__x + '#' * w + '\n') * (e))
 
     def __str__(self):
+        """
+        cooment
+        """
         h = self.__height
         r = '[Rectangle]'
         i = self.__width
@@ -90,6 +94,9 @@ class Rectangle(Base):
         return('{} ({}) {}/{} - {}/{}'.format(r, id_, p, self.__y, i, h))
 
     def update(self, *args, **kwargs):
+        """
+        cooment
+        """
         i = 0
         list = ['id', 'width', 'height', 'x', 'y']
         if len(args) > 0:
