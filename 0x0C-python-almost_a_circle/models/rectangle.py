@@ -113,7 +113,7 @@ class Rectangle(Base):
         cooment
         """
         i = 0
-        list = ['id', 'width', 'height', 'x', 'y']
+        list = ['id', 'size', 'x', 'y']
         if len(args) > 0 and args is not None:
             for value in args:
                 setattr(self, list[i], value)
@@ -122,3 +122,10 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
                 i += 1
+
+    def to_dictionary(self):
+        a = self.width
+        b = self.height
+        c = self.id
+        dict = {'x': self.x, 'y': self.y, 'id': c, 'width': a, 'height': b}
+        return dict
