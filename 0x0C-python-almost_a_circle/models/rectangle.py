@@ -124,6 +124,9 @@ class Rectangle(Base):
                 i += 1
 
     def to_dictionary(self):
+        """
+        comment
+        """
         a = self.width
         b = self.height
         c = self.id
