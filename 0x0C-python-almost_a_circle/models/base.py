@@ -40,3 +40,10 @@ class Base:
                 for i in list_objs:
                     list_.append(i.to_dictionary())
             file.write(cls.to_json_string(list_))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return '[]'
+        else:
+            return json.loads(json_string)
