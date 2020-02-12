@@ -1,2 +1,3 @@
 #!/usr/bin/env python3
-print('{}'.format('zYxWvUtSrQpOnMlKjIhGfEdCbA'), end='')
+for letter in 'zYxWvUtSrQpOnMlKjIhGfEdCbA':
+    print('{}'.format(letter), end='')
