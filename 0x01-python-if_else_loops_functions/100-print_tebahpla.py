@@ -1,3 +1,3 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 for letter in 'zYxWvUtSrQpOnMlKjIhGfEdCbA':
-    print('{}'.format(letter), end='')
+    print('{:s}'.format(letter), end='')
