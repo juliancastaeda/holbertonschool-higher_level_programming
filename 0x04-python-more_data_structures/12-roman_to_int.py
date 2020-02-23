@@ -17,6 +17,6 @@ def roman_to_int(roman_string):
         if previo >= actual:
             result += actual
         else:
-            result += actual - (2 * revio)
+            result += actual - (2 * previo)
         previo = actual
     return result
