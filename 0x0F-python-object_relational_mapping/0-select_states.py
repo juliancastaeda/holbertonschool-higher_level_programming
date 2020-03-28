@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 #
+#
 import MySQLdb
 db = "hbtn_0e_0_usa"
 host = "localhost"
