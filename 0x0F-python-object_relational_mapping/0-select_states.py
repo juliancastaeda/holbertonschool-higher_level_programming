@@ -2,13 +2,14 @@
 #
 #
 import MySQLdb
-#db = "hbtn_0e_0_usa"
-#host = host="localhost"
-#user = user="root"
-#passwd = passwd="root"
-#port = port=3306
-#charset = charset="utf8"
-conn = MySQLdb.connect(host="localhost", port=3306, user="root", passwd="root", db="hbtn_0e_0_usa", charset="utf8")
+
+#
+
+conn = (MySQLdb.connect(host="localhost",
+                        port=3306, user="root",
+                        passwd="root",
+                        db="hbtn_0e_0_usa",
+                        charset="utf8"))
 cur = conn.cursor()
 cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 query_rows = cur.fetchall()
