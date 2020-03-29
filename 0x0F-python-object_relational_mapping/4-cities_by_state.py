@@ -12,7 +12,7 @@ if __name__ == "__main__":
         password = sys.argv[2]
         database = sys.argv[3]
     connection = MySQLdb.connect(host='localhost',
-                         user=username, passwd=password, db=database)
+                                 user=username, passwd=password, db=database)
     cur = connection.cursor()
     cur.execute('''SELECT cities.id, cities.name,
                 states.name FROM cities INNER JOIN
