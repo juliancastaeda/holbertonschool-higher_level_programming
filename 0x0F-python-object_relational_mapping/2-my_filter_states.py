@@ -10,7 +10,7 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     dbname = sys.argv[3]
-    state = sys.argv[4]
+    stateNameSearched = sys.argv[4]
     connection = MySQLdb.Connect(host="localhost",
                                  port=3306,
                                  user=username,
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     cur.execute('''
                 SELECT * FROM states
                 WHERE states.name = '{}' ORDER BY id ASC
-                '''.format(state))
-    qR = cur.fetchall()
-    for row in qR:
+                '''.format(stateNameSearched))
+    row = cur.fetchall()
+    for row in row:
         print(row)
