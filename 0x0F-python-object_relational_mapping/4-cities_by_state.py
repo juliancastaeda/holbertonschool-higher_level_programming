@@ -11,7 +11,7 @@ if __name__ == "__main__":
         username = sys.argv[1]
         password = sys.argv[2]
         database = sys.argv[3]
-    db = MySQLdb.connect(host='localhost',
+    connection = MySQLdb.connect(host='localhost',
                          user=username, passwd=password, db=database)
     cur = connection.cursor()
     cur.execute('''SELECT cities.id, cities.name,
