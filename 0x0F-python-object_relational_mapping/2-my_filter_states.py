@@ -19,9 +19,11 @@ if __name__ == '__main__':
                                  charset="utf8")
     cur = connection.cursor()
     cur.execute('''
-                        SELECT * FROM states
-                        WHERE states.name = '{}' ORDER BY id ASC
-                       '''.format(state))
+                SELECT * FROM states
+                WHERE states.name = '{}' ORDER BY id ASC
+                '''.format(state))
     qR = cur.fetchall()
     for row in qR:
         print(row)
+    cur.close()
+    connection.close()
