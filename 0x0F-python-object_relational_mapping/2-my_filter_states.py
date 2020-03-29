@@ -25,5 +25,3 @@ if __name__ == '__main__':
     qR = cur.fetchall()
     for row in qR:
         print(row)
-    cur.close()
-    connection.close()
