@@ -8,10 +8,10 @@ import sys
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-base = declarative_base()
+Base = declarative_base()
 
 
-class State(base):
+class State(Base):
     """ Class state """
     __tablename__ = 'states'
     id = Column(Integer, autoincrement=True, nullable=False,  primary_key=True)
