@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
-function facR (fact) {
-  if (isNaN(fact)) {
+function fac (num) {
+  if (isNaN(num) || num === undefined || num === 0) {
     return 1;
   } else {
-    return fact * (facR(fact - 1));
+    return num * (fac(num - 1));
   }
 }
-const fact = parseInt(process.argv[2]);
-console.log(facR(fact));
+const num = parseInt(process.argv[2]);
+console.log(fac(num));
