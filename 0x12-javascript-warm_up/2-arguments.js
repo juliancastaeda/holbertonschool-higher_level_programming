@@ -2,7 +2,7 @@
 const myargv = process.argv.slice();
 
 if (myargv.length === 2) {
-  console.log('No Argument');
+  console.log('No argument');
 }
 
 if (myargv.length === 3) {
