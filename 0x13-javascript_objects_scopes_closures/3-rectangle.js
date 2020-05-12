@@ -10,7 +10,7 @@ class Rectangle {
 
   print () {
     for (let count = 1; count <= this.height; count++) {
-	console.log('X'.repeat(parseInt(this.width)));
+      console.log('X'.repeat(this.width));
     }
   }
 }
