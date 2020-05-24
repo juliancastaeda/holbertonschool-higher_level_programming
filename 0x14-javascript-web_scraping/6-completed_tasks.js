@@ -1,23 +1,22 @@
 #!/usr/bin/node
-const quest = require('request');
-const url = process.argv[2];
-
-function countTodos (taskList) {
-  const retObj = {};
-  for (let count = 0; count < taskList.length; count++) {
-    const userId = taskList[count].userId;
-    const comp = taskList[count].comp;
-    if (Object.prototype.hasOwnProperty.call(retObj, userId) && comp) {
-      retObj[userId] += 1;
-    } else if (comp) {
-      retObj[userId] = 1;
+// script that computes the number of tasks completed by user id.
+// The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
+// You must use the module request
+const request = require('request');
+const completed = {};
+request.get(process.argv[2], function (error, response, body) {
+  if (error) {
+    console.log(error);
+  } else if (response.statusCode === 200) {
+    for (const tasks of JSON.parse(body)) {
+      if (tasks.completed === true) {
+        if (!(tasks.userId in completed)) {
+          completed[tasks.userId] = 1;
+        } else {
+          completed[tasks.userId] += 1;
+        }
+      }
     }
+    console.log(completed);
   }
-  console.log(retObj);
-}
-
-quest
-  .get(url, (err, res, body) => {
-    if (err) { console.log(err); }
-    countTodos(JSON.parse(body));
-  });
+});
