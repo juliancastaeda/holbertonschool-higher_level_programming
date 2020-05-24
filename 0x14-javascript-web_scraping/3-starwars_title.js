@@ -1,11 +1,9 @@
 #!/usr/bin/node
-const quest = require('request');
-const episode = process.argv[2];
-
-quest('http://swapi.co/api/films/' + episode, (err, res, body) => {
-  if (err) {
-    console.log(err);
-  } else {
+const request = require('request');
+request.get('https://swapi-api.hbtn.io/api/films/' + process.argv[2] + '/', function (error, response, body) {
+  if (error) {
+    console.log(error);
+  } else if (response.statusCode === 200) {
     console.log(JSON.parse(body).title);
   }
 });
